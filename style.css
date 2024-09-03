@@ -1,0 +1,226 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Container and Layout Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1.5rem;
+    background-color: #f7fafc;
+}
+
+.dark-mode .container {
+    background-color: #1a202c;
+}
+
+.title {
+    margin-bottom: 1.5rem;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1a202c;
+}
+
+.dark-mode .title {
+    color: #f7fafc;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.6);
+}
+
+/* Color Variants for Buttons */
+.btn-blue { background-color: #3182ce; }
+.btn-blue:hover { background-color: #2b6cb0; }
+
+.btn-green { background-color: #48bb78; }
+.btn-green:hover { background-color: #38a169; }
+
+.btn-red { background-color: #e53e3e; }
+.btn-red:hover { background-color: #c53030; }
+
+.btn-yellow { background-color: #ecc94b; }
+.btn-yellow:hover { background-color: #d69e2e; }
+
+.btn-purple { background-color: #9f7aea; }
+.btn-purple:hover { background-color: #805ad5; }
+
+.btn-indigo { background-color: #5a67d8; }
+.btn-indigo:hover { background-color: #4c51bf; }
+
+.btn-gray { background-color: #718096; }
+.btn-gray:hover { background-color: #4a5568; }
+
+/* Mind Map Container Styles */
+.mindmap-container {
+    position: relative;
+    width: 100%;
+    height: 24rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.dark-mode .mindmap-container {
+    background-color: #2d3748;
+}
+
+.canvas-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvas-text {
+    color: #a0aec0;
+}
+
+.dark-mode .canvas-text {
+    color: #cbd5e0;
+}
+
+/* Node Styles */
+.node {
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+    border: 1px solid #333;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s;
+}
+
+.node.selected {
+    background-color: lightgreen;
+}
+
+.node:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* SVG Styles */
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Specific Node Style */
+#node-1 {
+    border: 3px solid #000;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .container {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    .mindmap-container {
+        height: 20rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        padding: 0.25rem;
+    }
+
+    .mindmap-container {
+        height: 16rem;
+    }
+
+    .btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+
+    .button-group {
+        gap: 0.5rem;
+    }
+}

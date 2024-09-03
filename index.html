@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Mind Map Creator</h1>
+        <div class="button-group">
+            <button id="newMindMap" class="btn btn-blue">New Mind Map</button>
+            <button id="saveMindMap" class="btn btn-green">Save</button>
+            <button id="deleteMindMap" class="btn btn-red">Delete</button>
+        </div>
+        <div class="button-group">
+            <button id="addNode" class="btn btn-yellow">Add Node</button>
+            <button id="connectNodes" class="btn btn-purple">Connect Nodes</button>
+            <button id="exportMindMap" class="btn btn-indigo">Export</button>
+        </div>
+        <div class="mindmap-container" id="mindMapCanvas">
+            <svg id="lines"></svg>
+            <div class="canvas-overlay">
+                <p class="canvas-text">Mind Map Canvas</p>
+            </div>
+        </div>
+        <div class="button-group">
+            <button id="undo" class="btn btn-gray">Undo</button>
+            <button id="redo" class="btn btn-gray">Redo</button>
+        </div>
+    </div>
+    <div class="mindmap-container" id="mindMapImageCanvas">
+        <canvas id="mindMapCanvasElement"></canvas>
+        <svg id="linesCanvas"></svg>
+        <div class="canvas-overlay">
+            <p class="canvas-text">Mind Map Canvas</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
